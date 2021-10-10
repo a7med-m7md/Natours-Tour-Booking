@@ -1,6 +1,8 @@
 const axios = require('axios')
-const stripe = Stripe(process.env.STRIPE_PUBLIC_KEY)
+const stripe = Stripe(process.env.STRIPE_PUBLIC_KEY + '')
 import { showAlert } from './alert'
+
+console.log(process.env.STRIPE_PUBLIC_KEY)
 
 export const bookTour = async (tourId)=>{
     try{

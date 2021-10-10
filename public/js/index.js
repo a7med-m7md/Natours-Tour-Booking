@@ -10,20 +10,25 @@ import { bookTour } from './stripe'
 
 const mapbox = document.getElementById('map')
 const bookingBtn = document.getElementById('booking')
-const loginForm = document.querySelector('.form-login')
+const loginForm = document.getElementById('submit-form')
 const logoutBtn = document.querySelector('.nav__el--logout')
 const updateData = document.querySelector('.form-user-data')
 const updatePassword = document.querySelector('.form-user-settings')
 
+
+
+console.log(document.querySelector('.submit-form'), 'sadasd')
 
 if(mapbox){
     const locations = JSON.parse(mapbox.dataset.locations)
     displayMap(locations)
 }
 
-if(loginForm){
+if(document.getElementById('submit-form')){
+    console.log("Hello from if")
     loginForm.addEventListener('submit', e=>{
         e.preventDefault()
+        console.log("hello")
         const email = document.getElementById('email').value
         const password = document.getElementById('password').value
         login(email, password)

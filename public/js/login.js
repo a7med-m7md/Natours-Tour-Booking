@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { showAlert } from './alert'
 
+console.log("==========")
+
 // Modules in NodeJs implemented using commonJS
 export const login = async (email, password)=>{
     try{
